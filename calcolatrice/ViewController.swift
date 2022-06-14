@@ -111,7 +111,6 @@ class ViewController: UIViewController {
         
         operatore = "+"
         number1 = Int(schermo.text!)!
-        print("ciao")
         clearText()
         
     }
