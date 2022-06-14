@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var schermo: UITextField!
     
-    var number1 = 0
-    var number2 = 0
-    var numberResult = 0
+    var number1: Double = 0
+    var number2: Double = 0
+    var numberResult: Double = 0
     
     var operatore = "+"
     
@@ -77,6 +77,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func insertVirgola(_ sender: UIButton) {
+        
+        schermo.text = schermo.text! + "."
+        
+    }
+    
     @IBAction func buttonErase(_ sender: UIButton) {
         
         clearText()
@@ -86,7 +92,7 @@ class ViewController: UIViewController {
     @IBAction func buttonDiv(_ sender: UIButton) {
         
         operatore = "/"
-        number1 = Int(schermo.text!)!
+        number1 = Double(schermo.text!)!
         clearText()
         
     }
@@ -94,7 +100,7 @@ class ViewController: UIViewController {
     @IBAction func buttonMolt(_ sender: UIButton) {
         
         operatore = "*"
-        number1 = Int(schermo.text!)!
+        number1 = Double(schermo.text!)!
         clearText()
         
     }
@@ -102,7 +108,7 @@ class ViewController: UIViewController {
     @IBAction func buttonMinus(_ sender: UIButton) {
         
         operatore = "-"
-        number1 = Int(schermo.text!)!
+        number1 = Double(schermo.text!)!
         clearText()
         
     }
@@ -110,14 +116,14 @@ class ViewController: UIViewController {
     @IBAction func buttonPlus(_ sender: UIButton) {
         
         operatore = "+"
-        number1 = Int(schermo.text!)!
+        number1 = Double(schermo.text!)!
         clearText()
         
     }
     
     @IBAction func calcolaRisultato(_ sender: UIButton) {
         
-        number2 = Int(schermo.text!)!
+        number2 = Double(schermo.text!)!
         
         switch operatore{
             
